@@ -292,7 +292,7 @@ K_l|n\rangle=
 \begin{cases}
 \displaystyle\sqrt{\binom nl}(1-\eta)^{l/2}\eta^{(n-l)/2}|n-l\rangle,
 &n\ge l,\\
-0,&n<l.
+0,&n\lt l.
 \end{cases}
 ```
 
@@ -401,7 +401,7 @@ The arbitrary-replacer lower bound is half this value:
 \boxed{
 \delta_E^*(\mathcal N_V\circ\Phi_2)
 \ge\frac{\sqrt{E(1-E/2)}}{\pi(V+1)},
-\qquad 0<E<2.
+\qquad 0\lt E\lt 2.
 }
 ```
 
