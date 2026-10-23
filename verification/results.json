@@ -1,0 +1,299 @@
+{
+  "status": "passed",
+  "generated_utc": "2026-10-23T07:32:35.184606+00:00",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39"
+  },
+  "seed": 9231,
+  "absolute_tolerance": 2e-11,
+  "scope": "Finite examples and exact rational checks only. No optimization over all states, no infinite-dimensional proof, and no truncated-amplifier simulation.",
+  "checks": {
+    "loss_and_phase": {
+      "status": "passed",
+      "input_support_levels": 16,
+      "reference_dimension": 3,
+      "input_states": 48,
+      "phase_laws": 9,
+      "transmissivities": [
+        0.001,
+        0.01,
+        0.1,
+        0.5,
+        0.9
+      ],
+      "bound_cases": 2160,
+      "dense_cross_checks": 30,
+      "kraus_completeness_max_abs_error": 6.661338147750939e-16,
+      "dense_action_max_abs_error": 0.0,
+      "trace_max_abs_error": 6.661624231823312e-16,
+      "reference_max_abs_error": 6.661591843008567e-16,
+      "output_energy_max_abs_error": 1.7763568394002505e-15,
+      "max_bound_excess": 0.0,
+      "binary_moment_identity_max_abs_error": 4.163336342344337e-17,
+      "laws": [
+        {
+          "name": "no-phase",
+          "abs_m1": 1.0,
+          "zero_m1": false,
+          "cases": 240,
+          "uncapped_bound_below_one_cases": 170,
+          "max_distance_to_uncapped_bound_ratio": 0.9781023921549449,
+          "worst_ratio_case": {
+            "input": "vacuum-1; weight=1e-06; entangled=True",
+            "eta": 0.001,
+            "energy": 1e-06,
+            "distance": 3.162326079424439e-05,
+            "uncapped_bound": 3.233123755537736e-05
+          }
+        },
+        {
+          "name": "antipodal",
+          "abs_m1": 6.123233995736766e-17,
+          "zero_m1": true,
+          "cases": 240,
+          "uncapped_bound_below_one_cases": 187,
+          "max_distance_to_uncapped_bound_ratio": 0.9994978801777299,
+          "worst_ratio_case": {
+            "input": "vacuum-2; weight=1e-06; entangled=True",
+            "eta": 0.001,
+            "energy": 2e-06,
+            "distance": 1.001998e-06,
+            "uncapped_bound": 1.0025013758126486e-06
+          }
+        },
+        {
+          "name": "three-equispaced",
+          "abs_m1": 1.2412670766236366e-16,
+          "zero_m1": true,
+          "cases": 240,
+          "uncapped_bound_below_one_cases": 187,
+          "max_distance_to_uncapped_bound_ratio": 0.5737863010793105,
+          "worst_ratio_case": {
+            "input": "highest-supported-number",
+            "eta": 0.001,
+            "energy": 15.0,
+            "distance": 0.014895453637998024,
+            "uncapped_bound": 0.02595993248702382
+          }
+        },
+        {
+          "name": "five-point-zero-m1",
+          "abs_m1": 1.0632984187413071e-16,
+          "zero_m1": true,
+          "cases": 240,
+          "uncapped_bound_below_one_cases": 187,
+          "max_distance_to_uncapped_bound_ratio": 0.5994750968553937,
+          "worst_ratio_case": {
+            "input": "vacuum-2; weight=0.5; entangled=True",
+            "eta": 0.001,
+            "energy": 1.0000000000000002,
+            "distance": 0.001199250156249877,
+            "uncapped_bound": 0.0020005003753127745
+          }
+        },
+        {
+          "name": "biased-0.55",
+          "abs_m1": 0.10000000000000009,
+          "zero_m1": false,
+          "cases": 240,
+          "uncapped_bound_below_one_cases": 182,
+          "max_distance_to_uncapped_bound_ratio": 0.8170988625351944,
+          "worst_ratio_case": {
+            "input": "vacuum-1; weight=1e-06; entangled=True",
+            "eta": 0.001,
+            "energy": 1e-06,
+            "distance": 3.1627761185576475e-06,
+            "uncapped_bound": 3.870738613861942e-06
+          }
+        },
+        {
+          "name": "biased-0.8",
+          "abs_m1": 0.6000000000000001,
+          "zero_m1": false,
+          "cases": 240,
+          "uncapped_bound_below_one_cases": 177,
+          "max_distance_to_uncapped_bound_ratio": 0.9640297800634581,
+          "worst_ratio_case": {
+            "input": "vacuum-1; weight=1e-06; entangled=True",
+            "eta": 0.001,
+            "energy": 1e-06,
+            "distance": 1.8974156480763007e-05,
+            "uncapped_bound": 1.9682126914703836e-05
+          }
+        },
+        {
+          "name": "angle-error-0.02",
+          "abs_m1": 0.009999833334166612,
+          "zero_m1": false,
+          "cases": 240,
+          "uncapped_bound_below_one_cases": 187,
+          "max_distance_to_uncapped_bound_ratio": 0.9099169399253881,
+          "worst_ratio_case": {
+            "input": "vacuum-2; weight=1e-06; entangled=True",
+            "eta": 0.1,
+            "energy": 2e-06,
+            "distance": 0.00010016495080167002,
+            "uncapped_bound": 0.00011008142216792161
+          }
+        },
+        {
+          "name": "angle-error-0.4",
+          "abs_m1": 0.1986693307950611,
+          "zero_m1": false,
+          "cases": 240,
+          "uncapped_bound_below_one_cases": 180,
+          "max_distance_to_uncapped_bound_ratio": 0.8987311581606166,
+          "worst_ratio_case": {
+            "input": "vacuum-1; weight=1e-06; entangled=True",
+            "eta": 0.001,
+            "energy": 1e-06,
+            "distance": 6.282972743996142e-06,
+            "uncapped_bound": 6.990936819031795e-06
+          }
+        },
+        {
+          "name": "combined-error",
+          "abs_m1": 0.28262470990430805,
+          "zero_m1": false,
+          "cases": 240,
+          "uncapped_bound_below_one_cases": 180,
+          "max_distance_to_uncapped_bound_ratio": 0.9266040613842444,
+          "worst_ratio_case": {
+            "input": "vacuum-1; weight=1e-06; entangled=True",
+            "eta": 0.001,
+            "energy": 1e-06,
+            "distance": 8.937873608715685e-06,
+            "uncapped_bound": 9.645839017113184e-06
+          }
+        }
+      ]
+    },
+    "cutoff_cipher": {
+      "status": "passed",
+      "dimensions": [
+        {
+          "cutoff_d": 2,
+          "physical_support_levels": 5,
+          "reference_dimension": 3,
+          "keys": 8,
+          "joint_input_states": 12
+        },
+        {
+          "cutoff_d": 3,
+          "physical_support_levels": 6,
+          "reference_dimension": 4,
+          "keys": 18,
+          "joint_input_states": 12
+        },
+        {
+          "cutoff_d": 4,
+          "physical_support_levels": 7,
+          "reference_dimension": 5,
+          "keys": 32,
+          "joint_input_states": 12
+        }
+      ],
+      "averaged_channel_cases": 36,
+      "keyed_inverse_cases": 696,
+      "fixed_replacer_bound_attainment_cases": 12,
+      "unitarity_max_abs_error": 1.1102230246251565e-16,
+      "keyed_inverse_max_abs_error": 1.1102230246251565e-16,
+      "averaged_channel_max_abs_error": 4.440892098500626e-16,
+      "T_equals_tail_weight_max_abs_error": 3.885780586188048e-16,
+      "averaged_energy_max_abs_error": 3.552713678800501e-15,
+      "reference_max_abs_error": 4.440892098500626e-16
+    },
+    "rational_constants": {
+      "status": "passed",
+      "arithmetic": "exact fractions; square roots bounded by nonnegative rational squares",
+      "B_d_cases": 830,
+      "largest_B_d_dimension": 257,
+      "E2_parameter_cases": 105,
+      "E2_corollary_cases": 70,
+      "E2R_corollary_cases": 400,
+      "K1_corollary_cases": 28,
+      "near_boundary_offset": "1/1000000000",
+      "E2_epsilon_upper_boundary": "1/6",
+      "E2R_total_error_upper_boundary": "1/8"
+    },
+    "homodyne_discrepancy": {
+      "status": "passed",
+      "meaning": "the independently integrated measurement witness exceeds the printed bound at large sigma",
+      "source": "https://doi.org/10.1103/PhysRevResearch.2.013332",
+      "source_version": "published Theorem 1, Eq. (21), n=1; arXiv:1902.10972v2 Theorem 2",
+      "input_states": "(|0> +/- |1>)/sqrt(2)",
+      "input_mean_photon_number": 0.5,
+      "quadrature": "Q=(a+a^dagger)/sqrt(2)",
+      "variance_convention": "V=2*sigma^2",
+      "coarse_orders": {
+        "Hermite": 32,
+        "Legendre_per_half_window": 96
+      },
+      "fine_orders": {
+        "Hermite": 64,
+        "Legendre_per_half_window": 192
+      },
+      "integration_window_in_units_sqrt_V_plus_half": [
+        -12,
+        12
+      ],
+      "cases": [
+        {
+          "sigma": 1.0,
+          "V": 2.0,
+          "integrated_homodyne_TV": 0.35682482323055087,
+          "closed_form_homodyne_TV": 0.3568248232305542,
+          "coarse_fine_abs_difference": 4.385380947269368e-15,
+          "fine_closed_form_abs_difference": 3.3306690738754696e-15,
+          "input_normalization_max_abs_error": 1.1102230246251565e-16,
+          "output_normalization_max_abs_error": 3.597122599785507e-14,
+          "printed_n1_bound": 9.0,
+          "witness_to_printed_bound_ratio": 0.03964720258117232,
+          "witness_exceeds_printed_bound": false
+        },
+        {
+          "sigma": 10.0,
+          "V": 200.0,
+          "integrated_homodyne_TV": 0.03984445356281881,
+          "closed_form_homodyne_TV": 0.03984445356281919,
+          "coarse_fine_abs_difference": 4.85722573273506e-16,
+          "fine_closed_form_abs_difference": 3.8163916471489756e-16,
+          "input_normalization_max_abs_error": 1.1102230246251565e-16,
+          "output_normalization_max_abs_error": 4.107825191113079e-14,
+          "printed_n1_bound": 0.08752499999999999,
+          "witness_to_printed_bound_ratio": 0.45523511639895814,
+          "witness_exceeds_printed_bound": false
+        },
+        {
+          "sigma": 30.0,
+          "V": 1800.0,
+          "integrated_homodyne_TV": 0.01329622944307236,
+          "closed_form_homodyne_TV": 0.013296229443072474,
+          "coarse_fine_abs_difference": 1.5612511283791264e-16,
+          "fine_closed_form_abs_difference": 1.1449174941446927e-16,
+          "input_normalization_max_abs_error": 1.1102230246251565e-16,
+          "output_normalization_max_abs_error": 4.107825191113079e-14,
+          "printed_n1_bound": 0.009722530864197531,
+          "witness_to_printed_bound_ratio": 1.3675687564062868,
+          "witness_exceeds_printed_bound": true
+        },
+        {
+          "sigma": 100.0,
+          "V": 20000.0,
+          "integrated_homodyne_TV": 0.003989372937164246,
+          "closed_form_homodyne_TV": 0.003989372937164278,
+          "coarse_fine_abs_difference": 3.382710778154774e-17,
+          "fine_closed_form_abs_difference": 3.209238430557093e-17,
+          "input_normalization_max_abs_error": 1.1102230246251565e-16,
+          "output_normalization_max_abs_error": 4.107825191113079e-14,
+          "printed_n1_bound": 0.0008750025000000001,
+          "witness_to_printed_bound_ratio": 4.55927033027248,
+          "witness_exceeds_printed_bound": true
+        }
+      ]
+    }
+  },
+  "elapsed_seconds": 1.1316669909974735
+}

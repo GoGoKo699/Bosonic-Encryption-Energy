@@ -1,0 +1,25 @@
+# Bosonic Encryption Energy
+
+> Exactly recoverable encryption of a mean-energy-bounded oscillator: ciphertext energy and finite-key resource laws, plus a first-Fourier-moment criterion for phase-assisted Gaussian displacement.
+
+## Scientific route
+
+- [Model](science/model.md): one input oscillator, one ciphertext oscillator, fixed nondegenerate number spectrum, arbitrary reference, half trace distance, exact keyed recovery, and energy accounting.
+- [Energy cost](science/energy_cost.md): E1 spectral diffuseness, E2 inverse-linear energy converse, perfect-secrecy impossibility, and E2R under small averaged correctness error.
+- [Finite key](science/finite_key.md): C1 exact Fock-block twirl with relative sign; K1 approximate quantum Shannon lemma and flagged energy reduction.
+- [Gaussian encryption](science/gaussian_encryption.md): G1 displacement-only rate, G2 full phase averaging, and G3 fair parity construction with arbitrary-reference proof.
+- [Phase criterion](science/phase_criterion.md): P1 fixed-law exponent classification, P2 minimum discrete phase entropy, P3 imbalance and angle-error estimates.
+- [Interpretation](science/interpretation.md): mechanism, examples, energy versus work, low-energy boundary, and distinct finite-key and optical implementations.
+- [Displacement comparison](science/displacement_comparison.md): normalization and a homodyne witness for a narrow quantitative issue in an earlier published bound.
+
+## Evidence and reproduction
+
+- [Related work](references/RELATED_WORK.md): primary-source comparison and attribution.
+- [Bibliography](references/references.bib): bibliographic metadata.
+- [Verification](verification/README.md): commands, finite numerical checks, actual environment, and limitations.
+
+## Reading constraints
+
+The theorem statements and proofs in science/ define the supported claims. Energy and key results determine scaling rather than optimal leading constants. The lower bound counts all transmitted degrees of freedom under a fixed single-oscillator spectrum. The key converse bounds finite alphabet size, not arbitrary nonuniform Shannon entropy. Gaussian displacement retains a continuous key; the one-bit claim concerns only additional phase randomness. The phase classification fixes the phase law and positive input energy while the displacement variance increases. Its dependence on very small input energy is stated separately.
+
+Standard finite-dimensional encryption bounds and Gaussian-channel facts are prior ingredients with explicit attribution. Finite matrix verification does not prove the infinite-dimensional theorems. The repository describes one-use secrecy, not authentication or a reusable-key protocol.
