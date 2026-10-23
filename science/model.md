@@ -21,7 +21,7 @@ Energy is measured in photons above the ground state. Multiplication by $`\hbar\
 For a prescribed $`E>0`$, admissible messages are all density operators $`\rho_{AR}`$ satisfying
 
 ```math
-\operatorname{Tr}(N\rho_A)\le E.
+\mathrm{Tr}(N\rho_A)\le E.
 ```
 
 The reference $`R`$ is arbitrary and may be held by an adversary. It can contain classical flags, quantum entanglement, or both. The only constraint is on the marginal energy of $`A`$. There is no assumption of Gaussian messages, a finite photon cutoff, or a bounded photon-number variance. Normal states and normal channels on separable Hilbert spaces are understood throughout.
@@ -33,7 +33,7 @@ The distinction between mean energy and a cutoff is operational. For every integ
 A classical key $`k`$, independent of the joint message $`\rho_{AR}`$, selects a completely positive trace-preserving encoder $`\mathcal E_k:A\to C`$ and decoder $`\mathcal D_k:C\to A`$. The central model requires
 
 ```math
-\mathcal D_k\circ\mathcal E_k=\operatorname{id}_A
+\mathcal D_k\circ\mathcal E_k=\mathrm{id}_A
 ```
 
 for every key of nonzero probability, or almost every key for a continuous distribution. This is exact recovery on the oscillator, including coherence with an arbitrary reference. Unitary encryption is a special case. The converse also allows reversible encoders with private ancillary randomness.
@@ -61,12 +61,12 @@ For a channel $`\mathcal C`$ and a fixed ciphertext state $`\tau`$, define
 
 ```math
 \delta_E(\mathcal C;\tau)
-=\sup_{\rho_{AR}:\operatorname{Tr}(N\rho_A)\le E}
-T\!\left[(\mathcal C\otimes\operatorname{id}_R)(\rho_{AR}),
+=\sup_{\rho_{AR}:\mathrm{Tr}(N\rho_A)\le E}
+T\!\left[(\mathcal C\otimes\mathrm{id}_R)(\rho_{AR}),
 \tau_C\otimes\rho_R\right].
 ```
 
-The supremum includes arbitrary reference systems. Equivalently, this is one half of the energy-constrained diamond distance from the replacement channel $`\mathcal R_\tau(\rho)=\tau\operatorname{Tr}\rho`$. Its meaning is that the ciphertext reveals at most $`\varepsilon`$ distinguishing advantage, in this distance convention, beyond what the reference already contains.
+The supremum includes arbitrary reference systems. Equivalently, this is one half of the energy-constrained diamond distance from the replacement channel $`\mathcal R_\tau(\rho)=\tau\mathrm{Tr}\rho`$. Its meaning is that the ciphertext reveals at most $`\varepsilon`$ distinguishing advantage, in this distance convention, beyond what the reference already contains.
 
 An encoder is $`\varepsilon`$-secret if there exists one $`\tau`$, independent of the input, for which
 
@@ -93,15 +93,15 @@ Two output-energy quantities are useful:
 ```math
 \tau_0=\overline{\mathcal E}(\lvert0\rangle\langle0\rvert),
 \qquad
-C_{\mathrm{vac}}=\operatorname{Tr}(N\tau_0),
+C_{\mathrm{vac}}=\mathrm{Tr}(N\tau_0),
 ```
 
 and
 
 ```math
 C_{\max}(E)
-=\sup_{\rho_A:\operatorname{Tr}(N\rho_A)\le E}
-\operatorname{Tr}\!\left[N\overline{\mathcal E}(\rho_A)\right].
+=\sup_{\rho_A:\mathrm{Tr}(N\rho_A)\le E}
+\mathrm{Tr}\!\left[N\overline{\mathcal E}(\rho_A)\right].
 ```
 
 Both average over the secret key. The first is the cost of encrypting vacuum; the second is the largest average ciphertext energy over the message family. Their values may be infinite. A lower bound on $`C_{\mathrm{vac}}`$ automatically lower-bounds $`C_{\max}(E)`$.

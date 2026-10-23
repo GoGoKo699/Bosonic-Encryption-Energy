@@ -16,16 +16,16 @@ D(\alpha)=e^{\alpha a^\dagger-\bar\alpha a},
 e^{-|\alpha|^2/V}D(\alpha)\rho D(\alpha)^\dagger.
 ```
 
-Thus $`\mathbb E|\alpha|^2=V`$, and the mean ciphertext photon number is the input mean plus $`V`$. The real displacement of $`q`$ is $`\sqrt2\operatorname{Re}\alpha`$, a centered Gaussian of variance $`V`$. If the input homodyne density is $`p`$, the output density is $`p*g_V`$, where
+Thus $`\mathbb E|\alpha|^2=V`$, and the mean ciphertext photon number is the input mean plus $`V`$. The real displacement of $`q`$ is $`\sqrt2\mathrm{Re}\alpha`$, a centered Gaussian of variance $`V`$. If the input homodyne density is $`p`$, the output density is $`p*g_V`$, where
 
 ```math
 g_t(q)=\frac{1}{\sqrt{2\pi t}}e^{-q^2/(2t)}.
 ```
 
-We use half trace distance $`T(\rho,\sigma)=\|\rho-\sigma\|_1/2`$ and total variation $`\operatorname{TV}(p,p')=\int|p-p'|/2`$. Measurement contracts trace distance:
+We use half trace distance $`T(\rho,\sigma)=\|\rho-\sigma\|_1/2`$ and total variation $`\mathrm{TV}(p,p')=\int|p-p'|/2`$. Measurement contracts trace distance:
 
 ```math
-T(\rho,\sigma)\ge\operatorname{TV}(p_\rho,p_\sigma).
+T(\rho,\sigma)\ge\mathrm{TV}(p_\rho,p_\sigma).
 ```
 
 The optimized replacement error $`\delta_E^*(\mathcal C)`$ is defined in [the model](model.md). A pairwise witness lower-bounds this error with an additional factor of $`1/2`$:
@@ -43,18 +43,18 @@ Take coherent plaintexts $`|\sqrt E\rangle`$ and $`|-\sqrt E\rangle`$. Their enc
 
 ```math
 \begin{aligned}
-\operatorname{TV}(p_{+,V},p_{-,V})
+\mathrm{TV}(p_{+,V},p_{-,V})
 &=2\Phi\!\left(\sqrt{\frac{2E}{s}}\right)-1\\
-&=\operatorname{erf}\!\sqrt{\frac{E}{V+1/2}}.
+&=\mathrm{erf}\!\sqrt{\frac{E}{V+1/2}}.
 \end{aligned}
 ```
 
-Here $`\Phi`$ is the standard normal cumulative distribution and $`\operatorname{erf}`$ is the error function. Consequently,
+Here $`\Phi`$ is the standard normal cumulative distribution and $`\mathrm{erf}`$ is the error function. Consequently,
 
 ```math
 \boxed{
 \delta_E^*(\mathcal N_V)
-\ge\frac12\operatorname{erf}
+\ge\frac12\mathrm{erf}
 \!\sqrt{\frac{E}{V+1/2}}.
 }
 ```
@@ -62,7 +62,7 @@ Here $`\Phi`$ is the standard normal cumulative distribution and $`\operatorname
 This homodyne witness is slightly stronger than the heterodyne witness in G1 of the [Gaussian chapter](gaussian_encryption.md), which has denominator $`V+1`$. Both have the same asymptotic exponent. Combining the present lower bound with G1's arbitrary-reference upper bound yields
 
 ```math
-\frac12\operatorname{erf}\!\sqrt{\frac{E}{V+1/2}}
+\frac12\mathrm{erf}\!\sqrt{\frac{E}{V+1/2}}
 \le\delta_E^*(\mathcal N_V)
 \le\delta_E(\mathcal N_V;\tau_V)
 \le\min\!\left\{1,\sqrt{\frac{2E}{V+1}}\right\}.
@@ -72,7 +72,7 @@ For every fixed $`E>0`$, the error is therefore $`\Theta(V^{-1/2})`$ as $`V\to\i
 
 ```math
 V+\frac12\ge
-\frac{E}{[\operatorname{erf}^{-1}(2\varepsilon)]^2}
+\frac{E}{[\mathrm{erf}^{-1}(2\varepsilon)]^2}
 =\frac{E}{\pi\varepsilon^2}(1+o(1))
 \quad(\varepsilon\downarrow0).
 ```
@@ -120,7 +120,7 @@ For a centered normal variable of variance $`s`$, $`\mathbb E|Q|=\sqrt{2s/\pi}`$
 
 ```math
 \begin{aligned}
-\operatorname{TV}(p_{+,V},p_{-,V})
+\mathrm{TV}(p_{+,V},p_{-,V})
 &=\frac{\sqrt2}{2s}\sqrt{\frac{2s}{\pi}}
 =\frac{1}{\sqrt{\pi s}},\\
 T\!\left(

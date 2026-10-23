@@ -76,12 +76,12 @@ The suite verifies both identities
 ```math
 T\!\left[(\mathcal C_d\otimes\mathrm{id})(\rho),
 \pi_d\otimes\rho_R\right]=q,
-\qquad q=\operatorname{Tr}(Q_d\rho_A),
+\qquad q=\mathrm{Tr}(Q_d\rho_A),
 ```
 
 ```math
-\operatorname{Tr}[N\mathcal C_d(\rho)]
-=\frac{d-1}{2}(1-q)+\operatorname{Tr}(NQ_d\rho Q_d).
+\mathrm{Tr}[N\mathcal C_d(\rho)]
+=\frac{d-1}{2}(1-q)+\mathrm{Tr}(NQ_d\rho Q_d).
 ```
 
 Additional inputs attain $`\min\{1,E/d\}`$ for the stated fixed replacer, including energy budgets on both sides of $`E=d`$. These are checks of the construction and that fixed-replacer equality. They do not optimize the replacement state or numerically establish the infinite-support energy supremum.

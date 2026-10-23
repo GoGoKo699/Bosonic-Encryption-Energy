@@ -43,7 +43,7 @@ The direct sum specifies the action on both subspaces. Decryption applies $`U_{a
 Let $`\mathcal C_d`$ be the average of the unitary channels $`U_{abs}`$. For every joint state $`\rho_{AR}`$,
 
 ```math
-(\mathcal C_d\otimes\operatorname{id}_R)(\rho_{AR})
+(\mathcal C_d\otimes\mathrm{id}_R)(\rho_{AR})
 =\pi_d\otimes\rho_R^{\rm low}+\rho_{AR}^{\rm high},
 ```
 
@@ -51,16 +51,16 @@ where
 
 ```math
 \rho_R^{\rm low}
-=\operatorname{Tr}_A[(P_d\otimes I_R)\rho_{AR}(P_d\otimes I_R)],
+=\mathrm{Tr}_A[(P_d\otimes I_R)\rho_{AR}(P_d\otimes I_R)],
 \qquad
 \rho_{AR}^{\rm high}
 =(Q_d\otimes I_R)\rho_{AR}(Q_d\otimes I_R).
 ```
 
-These operators are subnormalized. Writing $`q=\operatorname{Tr}(Q_d\rho_A)`$, the secrecy error relative to $`\pi_d`$ is exactly
+These operators are subnormalized. Writing $`q=\mathrm{Tr}(Q_d\rho_A)`$, the secrecy error relative to $`\pi_d`$ is exactly
 
 ```math
-T\!\left[(\mathcal C_d\otimes\operatorname{id}_R)(\rho_{AR}),
+T\!\left[(\mathcal C_d\otimes\mathrm{id}_R)(\rho_{AR}),
          \pi_d\otimes\rho_R\right]=q.
 ```
 
@@ -79,9 +79,9 @@ The average ciphertext of the vacuum is $`\pi_d`$, so
 For an arbitrary input of finite mean photon number,
 
 ```math
-\operatorname{Tr}[N\mathcal C_d(\rho_A)]
-=\frac{d-1}{2}\operatorname{Tr}(P_d\rho_A)
- +\operatorname{Tr}(NQ_d\rho_AQ_d).
+\mathrm{Tr}[N\mathcal C_d(\rho_A)]
+=\frac{d-1}{2}\mathrm{Tr}(P_d\rho_A)
+ +\mathrm{Tr}(NQ_d\rho_AQ_d).
 ```
 
 In particular, the supremum of the average-key output energy over allowed inputs is
@@ -119,7 +119,7 @@ Partial tracing over the oscillator removes low/high cross terms, hence
 ```math
 \rho_R=\rho_R^{\rm low}+\rho_R^{\rm high},
 \qquad
-\rho_R^{\rm high}=\operatorname{Tr}_A\rho_{AR}^{\rm high}.
+\rho_R^{\rm high}=\mathrm{Tr}_A\rho_{AR}^{\rm high}.
 ```
 
 Subtracting the replacer output gives
@@ -150,12 +150,12 @@ For $`E\ge d`$, the input $`|d\rangle\langle d|`$ attains error one. This proves
 The averaged-channel formula gives
 
 ```math
-\operatorname{Tr}[N\mathcal C_d(\rho_A)]
+\mathrm{Tr}[N\mathcal C_d(\rho_A)]
 =e_d(1-q)+h,
 \qquad
 e_d=(d-1)/2,
 \qquad
-h=\operatorname{Tr}(NQ_d\rho_AQ_d).
+h=\mathrm{Tr}(NQ_d\rho_AQ_d).
 ```
 
 The vacuum has $`q=h=0`$. For any allowed input, $`h\le E`$, so the output energy is at most $`e_d+E`$. To show this is the supremum when $`E>0`$, take integers $`n\ge\max\{d,E\}`$ and inputs
@@ -206,7 +206,7 @@ Let $`R`$ be $`d`$-dimensional and let $`\Phi_d`$ be maximally entangled between
 
 ```math
 \omega_{RC}
-=(\operatorname{id}_R\otimes\overline{\mathcal E})(\Phi_d),
+=(\mathrm{id}_R\otimes\overline{\mathcal E})(\Phi_d),
 \qquad
 T(\omega_{RC},\pi_R\otimes\tau_C)\le\delta<1,
 \qquad
@@ -236,7 +236,7 @@ The Fuchs–van de Graaf inequality gives $`F(\omega_{RC},\pi_R\otimes\tau_C)\ge
 =\sum_{k=1}^{M}p_k\omega^k_{RC}\otimes|k\rangle\langle k|,
 \qquad
 \omega^k_{RC}
-=(\operatorname{id}_R\otimes\mathcal E_k)(\Phi_d).
+=(\mathrm{id}_R\otimes\mathcal E_k)(\Phi_d).
 ```
 
 By the extension form of Uhlmann's theorem, $`\pi_R\otimes\tau_C`$ has an extension $`\zeta_{RCK}`$ with
@@ -260,13 +260,13 @@ Apply the decoder controlled by $`K`$ and then discard $`K`$. Exact correctness 
 ```math
 \zeta'_{RA'}
 =\sum_{k=1}^{M}
- (\operatorname{id}_R\otimes\mathcal D_k)(\zeta^k_{RC}).
+ (\mathrm{id}_R\otimes\mathcal D_k)(\zeta^k_{RC}).
 ```
 
 Fidelity contraction and the purity of $`\Phi_d`$ imply
 
 ```math
-\operatorname{Tr}(\Phi_d\zeta'_{RA'})
+\mathrm{Tr}(\Phi_d\zeta'_{RA'})
 =F(\Phi_d,\zeta'_{RA'})^2
 \ge(1-\delta)^2.
 ```
@@ -275,15 +275,15 @@ On the other hand, positivity of every decoder and the block inequality give
 
 ```math
 \begin{aligned}
-\operatorname{Tr}(\Phi_d\zeta'_{RA'})
+\mathrm{Tr}(\Phi_d\zeta'_{RA'})
 &\le
 \sum_{k=1}^{M}
-\operatorname{Tr}\!\left[
+\mathrm{Tr}\!\left[
  \Phi_d(\pi_R\otimes\mathcal D_k(\tau_C))
 \right]\\
 &=
 \frac1{d^2}\sum_{k=1}^{M}
-\operatorname{Tr}[P_d\mathcal D_k(\tau_C)]\\
+\mathrm{Tr}[P_d\mathcal D_k(\tau_C)]\\
 &\le\frac{M}{d^2}.
 \end{aligned}
 ```
@@ -337,7 +337,7 @@ For a secrecy witness $`\tau_C`$, trace distance splits across the two flag bloc
 ```math
 r_d\,
 T\!\left[
- (\overline{\mathcal E}\otimes\operatorname{id}_R)(\Phi_d),
+ (\overline{\mathcal E}\otimes\mathrm{id}_R)(\Phi_d),
  \tau_C\otimes\pi_R
 \right]
 \le\epsilon.
@@ -410,7 +410,7 @@ The finite key and full-oscillator reversibility also distinguish C1 from physic
 
 - **MTW2000:** Michele Mosca, Alain Tapp, and Ronald de Wolf, *Private Quantum Channels and the Cost of Randomizing Quantum Information*, [arXiv:quant-ph/0003101v2](https://arxiv.org/abs/quant-ph/0003101v2). Standard quantum one-time-pad background. The related FOCS 2000 publication includes Andris Ambainis and has bibliography key `ambainis2000private`.
 - **DD2010:** Simon Pierre Desrosiers and Frédéric Dupuis, *Quantum entropic security and approximate quantum encryption*, IEEE Transactions on Information Theory 56, 3455–3464 (2010); [arXiv:0707.0691v2](https://arxiv.org/abs/0707.0691v2), [DOI](https://doi.org/10.1109/TIT.2010.2048488). Known approximate quantum Shannon lemma; bibliography key `desrosiers2010entropic`.
-- **LC2019:** Ching-Yi Lai and Kai-Min Chung, *Quantum Encryption and Generalized Quantum Shannon Impossibility*, Designs, Codes and Cryptography 87, 1961–1972 (2019); [arXiv:1801.03656v2](https://arxiv.org/abs/1801.03656v2), [DOI](https://doi.org/10.1007/s10623-018-00597-3). Equation (1), the squared-factor correction, and imperfect-correctness extensions; bibliography key `lai2019encryption`.
+- **LC2019:** Ching-Yi Lai and Kai-Min Chung, *Quantum encryption and generalized Shannon impossibility*, Designs, Codes and Cryptography 87, 1961–1972 (2019); [DOI](https://doi.org/10.1007/s10623-018-00597-3). The [arXiv:1801.03656v2 preprint](https://arxiv.org/abs/1801.03656v2) is titled *Quantum Encryption and Generalized Quantum Shannon Impossibility*. Equation (1), the squared-factor correction, and imperfect-correctness extensions; bibliography key `lai2019encryption`.
 - **FvdG1999:** Christopher A. Fuchs and Jeroen van de Graaf, *Cryptographic Distinguishability Measures for Quantum Mechanical States*, IEEE Transactions on Information Theory 45, 1216–1227 (1999); [arXiv:quant-ph/9712042v2](https://arxiv.org/abs/quant-ph/9712042v2). Fidelity/trace-distance inequalities; bibliography key `fuchs1999cryptographic`.
 - **Uhlmann1976:** Armin Uhlmann, *The “transition probability” in the state space of a $`*`$-algebra*, Reports on Mathematical Physics 9, 273–279 (1976); [DOI](https://doi.org/10.1016/0034-4877(76)90060-4). Purification and state-extension fidelity; bibliography key `uhlmann1976transition`.
 

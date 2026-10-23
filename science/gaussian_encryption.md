@@ -18,8 +18,8 @@ For a channel $`\mathcal C`$ and a fixed ciphertext state $`\tau`$, the referenc
 
 ```math
 \delta_E(\mathcal C;\tau)
-=\sup_{\rho_{AR}:\,\operatorname{Tr}N\rho_A\le E}
-T\!\left((\mathcal C\otimes\operatorname{id}_R)(\rho_{AR}),
+=\sup_{\rho_{AR}:\,\mathrm{Tr}N\rho_A\le E}
+T\!\left((\mathcal C\otimes\mathrm{id}_R)(\rho_{AR}),
           \tau\otimes\rho_R\right).
 ```
 
@@ -53,14 +53,14 @@ The parameter is normalized so that $`\mathbb E|\alpha|^2=V`$. In particular, th
 \tau_V=\mathcal N_V(|0\rangle\langle0|)
 =\sum_{n=0}^\infty\frac{V^n}{(V+1)^{n+1}}
   |n\rangle\langle n|,
-\qquad \operatorname{Tr}N\tau_V=V.
+\qquad \mathrm{Tr}N\tau_V=V.
 ```
 
 If $`\rho`$ has finite mean photon number, averaging over the centered displacement distribution gives
 
 ```math
-\operatorname{Tr}N\mathcal N_V(\rho)
-=\operatorname{Tr}N\rho+V.
+\mathrm{Tr}N\mathcal N_V(\rho)
+=\mathrm{Tr}N\rho+V.
 ```
 
 Secret phase rotations preserve the input photon number, so this same energy formula applies to every construction in this chapter. It describes the averaged ciphertext energy. The displacement distribution has unbounded support, and there is no finite upper bound on the displacement energy for every individual key value.
@@ -79,7 +79,7 @@ Let $`\mathcal L_\eta`$ denote the quantum-limited attenuator of power transmiss
 
 This identity and the Fock-basis Kraus representation used below are established Gaussian-channel facts; see [Ivan, Sabapathy and Simon (2011)](../references/RELATED_WORK.md#ivan2011operatorsum). The factorization with precisely $`\eta=1/(1+V)`$ is also stated in [Mishra, Khabbazi Oskouei and Wilde (2023)](../references/RELATED_WORK.md#mishra2023teleportation).
 
-For completeness, it can be checked on the Weyl characteristic function $`\chi_\rho(z)=\operatorname{Tr}\rho D(z)`$:
+For completeness, it can be checked on the Weyl characteristic function $`\chi_\rho(z)=\mathrm{Tr}\rho D(z)`$:
 
 ```math
 \begin{aligned}
@@ -104,7 +104,7 @@ For every $`E\ge0`$ and $`V>0`$,
 
 ```math
 \boxed{
-\frac12\operatorname{erf}\!\sqrt{\frac{E}{V+1}}
+\frac12\mathrm{erf}\!\sqrt{\frac{E}{V+1}}
 \;\le\;\delta_E^*(\mathcal N_V)
 \;\le\;\delta_E(\mathcal N_V;\tau_V)
 \;\le\;\min\!\left\{1,\sqrt{\frac{2E}{V+1}}\right\}.
@@ -123,12 +123,12 @@ q_\pm(z)=\frac1{\pi s}
 \qquad s=V+1.
 ```
 
-Their likelihood-ratio decision boundary is $`\operatorname{Re}z=0`$. Since each real marginal has variance $`s/2`$, their total variation distance is exactly
+Their likelihood-ratio decision boundary is $`\mathrm{Re}z=0`$. Since each real marginal has variance $`s/2`$, their total variation distance is exactly
 
 ```math
-\operatorname{TV}(q_+,q_-)
+\mathrm{TV}(q_+,q_-)
 =2\Phi\!\left(\sqrt{\frac{2E}{s}}\right)-1
-=\operatorname{erf}\!\sqrt{\frac Es},
+=\mathrm{erf}\!\sqrt{\frac Es},
 ```
 
 where $`\Phi`$ is the standard normal distribution function. Measurement cannot increase trace distance, so the quantum outputs have trace distance at least this value. Applying the pairwise triangle inequality stated above gives the factor $`1/2`$ in G1.
@@ -137,7 +137,7 @@ More explicitly, if some fixed replacement state achieves error at most $`0<\var
 
 ```math
 V+1\ge
-\frac{E}{[\operatorname{erf}^{-1}(2\varepsilon)]^2}
+\frac{E}{[\mathrm{erf}^{-1}(2\varepsilon)]^2}
 =\frac{E}{\pi\varepsilon^2}(1+o(1))
 \quad (\varepsilon\downarrow0).
 ```
@@ -149,7 +149,7 @@ This is a lower bound on the best possible replacement target for the displaceme
 Put $`\eta=1/(V+1)`$ and let
 
 ```math
-\omega_{BR}=(\mathcal L_\eta\otimes\operatorname{id}_R)(\rho_{AR}).
+\omega_{BR}=(\mathcal L_\eta\otimes\mathrm{id}_R)(\rho_{AR}).
 ```
 
 If $`p_n=\langle n|\rho_A|n\rangle`$, its nonvacuum probability is
@@ -160,12 +160,12 @@ t=1-\sum_{n=0}^\infty(1-\eta)^n p_n
 \le\eta E.
 ```
 
-Let $`\omega_R^0=\langle0|\omega_{BR}|0\rangle`$ be the unnormalized vacuum block. Trace preservation implies $`0\le\omega_R^0\le\rho_R`$, with $`\operatorname{Tr}\omega_R^0=1-t`$. Use root fidelity $`F(\rho,\sigma)=\|\sqrt\rho\sqrt\sigma\|_1`$. Because the second state has vacuum support on $`B`$,
+Let $`\omega_R^0=\langle0|\omega_{BR}|0\rangle`$ be the unnormalized vacuum block. Trace preservation implies $`0\le\omega_R^0\le\rho_R`$, with $`\mathrm{Tr}\omega_R^0=1-t`$. Use root fidelity $`F(\rho,\sigma)=\|\sqrt\rho\sqrt\sigma\|_1`$. Because the second state has vacuum support on $`B`$,
 
 ```math
 F(\omega_{BR},|0\rangle\langle0|\otimes\rho_R)
 =F(\omega_R^0,\rho_R)
-\ge\operatorname{Tr}\omega_R^0=1-t.
+\ge\mathrm{Tr}\omega_R^0=1-t.
 ```
 
 The inequality follows from $`\rho_R\ge\omega_R^0`$ and operator monotonicity of the square root:
@@ -178,7 +178,7 @@ T(\omega_{BR},|0\rangle\langle0|\otimes\rho_R)
 \le\sqrt{2\eta E}.
 ```
 
-Finally apply $`\mathcal A_{V+1}\otimes\operatorname{id}_R`$. Trace distance contracts, and the amplifier maps the vacuum to $`\tau_V`$. Including the trivial upper bound of one proves G1. This argument retains the original reference marginal throughout; replacing the conditional vacuum reference state by $`\rho_R`$ without a bound would not justify the result.
+Finally apply $`\mathcal A_{V+1}\otimes\mathrm{id}_R`$. Trace distance contracts, and the amplifier maps the vacuum to $`\tau_V`$. Including the trivial upper bound of one proves G1. This argument retains the original reference marginal throughout; replacing the conditional vacuum reference state by $`\rho_R`$ without a bound would not justify the result.
 
 Gaussian displacement private channels and finite displacement approximations have an established history; see [Brádler (2005)](../references/RELATED_WORK.md#bradler2005private) and [Krüger (2006)](../references/RELATED_WORK.md#kruger2006gaussian). Their assumptions and metrics, and the quantitative issue in the later finite-cutoff displacement bound of [Ouyang et al. (2020)](../references/RELATED_WORK.md#ouyang2020homomorphic), are compared in the related-work chapter. G1 uses the explicit convention and arbitrary-reference criterion defined here.
 
@@ -206,11 +206,11 @@ For every $`E\ge0`$ and $`V>0`$,
 To prove this, phase average an arbitrary joint state:
 
 ```math
-(\Phi_{\mathrm{ph}}\otimes\operatorname{id}_R)(\rho_{AR})
+(\Phi_{\mathrm{ph}}\otimes\mathrm{id}_R)(\rho_{AR})
 =\sum_{n=0}^\infty |n\rangle\langle n|\otimes\rho_R^n,
 ```
 
-where every $`\rho_R^n`$ is positive, $`\sum_n\rho_R^n=\rho_R`$, and $`\sum_n n\operatorname{Tr}\rho_R^n\le E`$. These reference blocks need not have orthogonal supports.
+where every $`\rho_R^n`$ is positive, $`\sum_n\rho_R^n=\rho_R`$, and $`\sum_n n\mathrm{Tr}\rho_R^n\le E`$. These reference blocks need not have orthogonal supports.
 
 Loss maps each number state to a binomial distribution,
 
@@ -222,7 +222,7 @@ Loss maps each number state to a binomial distribution,
 The resulting joint state is block diagonal in the transmitted photon number. Its nonvacuum weight is
 
 ```math
-t=\sum_n\bigl[1-(1-\eta)^n\bigr]\operatorname{Tr}\rho_R^n
+t=\sum_n\bigl[1-(1-\eta)^n\bigr]\mathrm{Tr}\rho_R^n
 \le\eta E.
 ```
 
@@ -296,10 +296,10 @@ K_l|n\rangle=
 \end{cases}
 ```
 
-Let $`\omega=(\mathcal L_\eta\circ\Phi_2\otimes\operatorname{id}_R)(|\psi\rangle\langle\psi|)`$, and put $`P_0=|0\rangle\langle0|\otimes I_R`$ and $`Q_0=I-P_0`$. Its nonvacuum probability obeys the same estimate as before,
+Let $`\omega=(\mathcal L_\eta\circ\Phi_2\otimes\mathrm{id}_R)(|\psi\rangle\langle\psi|)`$, and put $`P_0=|0\rangle\langle0|\otimes I_R`$ and $`Q_0=I-P_0`$. Its nonvacuum probability obeys the same estimate as before,
 
 ```math
-t=\operatorname{Tr}Q_0\omega
+t=\mathrm{Tr}Q_0\omega
 =1-\sum_n(1-\eta)^np_n\le\eta E.
 ```
 
@@ -339,7 +339,7 @@ For $`0<\eta<1`$, nonnegativity permits exchanging the sums, which gives
 \begin{aligned}
 \sum_l\frac{b_l}{l+1}
 &\le\sum_n\frac{p_n}{(n+1)(1-\eta)}
-    \Pr\{\operatorname{Bin}(n+1,\eta)\ge2\}\\
+    \Pr\{\mathrm{Bin}(n+1,\eta)\ge2\}\\
 &\le\sum_n\frac{p_n}{(n+1)(1-\eta)}
     \frac{n(n+1)\eta^2}{2}\\
 &\le\frac{\eta^2E}{2(1-\eta)}.
@@ -353,7 +353,7 @@ The second line uses $`\Pr(K\ge2)\le\mathbb E[K(K-1)]/2`$. Consequently,
 \eta\sqrt{\frac{E(E+1)}{2(1-\eta)}}.
 ```
 
-To convert this to the required distance, write $`\omega_+=Q_0\omega Q_0`$ and $`\rho_R^+=\operatorname{Tr}_B\omega_+`$. The reference marginal remains $`\rho_R`$. The block-diagonal part of $`\omega-|0\rangle\langle0|\otimes\rho_R`$ is therefore
+To convert this to the required distance, write $`\omega_+=Q_0\omega Q_0`$ and $`\rho_R^+=\mathrm{Tr}_B\omega_+`$. The reference marginal remains $`\rho_R`$. The block-diagonal part of $`\omega-|0\rangle\langle0|\otimes\rho_R`$ is therefore
 
 ```math
 \omega_+-|0\rangle\langle0|\otimes\rho_R^+.
@@ -385,13 +385,13 @@ These plaintexts have energy $`E`$ and are invariant under parity. Put $`s=V+1`$
 ```math
 q_+(z)-q_-(z)
 =\frac{2\sqrt{E(1-E/2)}}{s^2}
-  \operatorname{Re}(z^2)g_s(z).
+  \mathrm{Re}(z^2)g_s(z).
 ```
 
 For $`Z`$ distributed according to $`g_s`$, the radial and angular variables are independent, with $`\mathbb E|Z|^2=s`$ and $`\mathbb E|\cos(2\arg Z)|=2/\pi`$. Hence
 
 ```math
-\operatorname{TV}(q_+,q_-)
+\mathrm{TV}(q_+,q_-)
 =\frac{2\sqrt{E(1-E/2)}}{\pi(V+1)}.
 ```
 

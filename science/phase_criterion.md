@@ -10,8 +10,8 @@ Use the oscillator, displacement parameter, thermal state, and trace-distance co
 
 ```math
 \delta_E(\mathcal C;\tau)
-=\sup_{\rho_{AR}:\,\operatorname{Tr}N\rho_A\le E}
-T\!\left((\mathcal C\otimes\operatorname{id}_R)(\rho_{AR}),
+=\sup_{\rho_{AR}:\,\mathrm{Tr}N\rho_A\le E}
+T\!\left((\mathcal C\otimes\mathrm{id}_R)(\rho_{AR}),
           \tau\otimes\rho_R\right),
 \qquad
 \delta_E^*(\mathcal C)=\inf_\tau\delta_E(\mathcal C;\tau).
@@ -91,7 +91,7 @@ Both inputs obey the energy bound. Let $`s=V+1`$ and $`g_s(z)=e^{-|z|^2/s}/(\pi 
 ```math
 q_+(z)-q_-(z)
 =\frac{4\sqrt{e(1-e)}}s
-\operatorname{Re}(m_1\bar z)\,g_s(z).
+\mathrm{Re}(m_1\bar z)\,g_s(z).
 ```
 
 To see the normalization, the unencrypted Husimi densities are
@@ -99,15 +99,15 @@ To see the normalization, the unencrypted Husimi densities are
 ```math
 Q_\pm(z)=\frac{e^{-|z|^2}}\pi
 \left[1-e+e|z|^2
-\pm2\sqrt{e(1-e)}\operatorname{Re}z\right].
+\pm2\sqrt{e(1-e)}\mathrm{Re}z\right].
 ```
 
-Phase averaging multiplies the first harmonic by $`m_1`$. Convolution with the complex Gaussian displacement law replaces the first harmonic by $`\operatorname{Re}(m_1\bar z)/s`$ times $`g_s(z)`$. Equivalently, for independent circular Gaussians of variances one and $`V`$, the conditional mean of the first variable given their sum $`z`$ is $`z/s`$.
+Phase averaging multiplies the first harmonic by $`m_1`$. Convolution with the complex Gaussian displacement law replaces the first harmonic by $`\mathrm{Re}(m_1\bar z)/s`$ times $`g_s(z)`$. Equivalently, for independent circular Gaussians of variances one and $`V`$, the conditional mean of the first variable given their sum $`z`$ is $`z/s`$.
 
-A rotation of the classical heterodyne outcome absorbs $`\arg m_1`$. Since $`\mathbb E_{g_s}|\operatorname{Re}Z|=\sqrt{s/\pi}`$, the exact classical distance is
+A rotation of the classical heterodyne outcome absorbs $`\arg m_1`$. Since $`\mathbb E_{g_s}|\mathrm{Re}Z|=\sqrt{s/\pi}`$, the exact classical distance is
 
 ```math
-\operatorname{TV}(q_+,q_-)
+\mathrm{TV}(q_+,q_-)
 =\frac{2|m_1|\sqrt{e(1-e)}}{\sqrt{\pi(V+1)}}.
 ```
 
@@ -153,9 +153,9 @@ q_1(z)=g_s(z)\left[\frac{s-1}s+\frac{|z|^2}{s^2}\right].
 Under $`g_s`$, the random variable $`U=|Z|^2/s`$ has an exponential distribution of mean one, and $`\mathbb E|U-1|=2/\exp(1)`$. Consequently,
 
 ```math
-\operatorname{TV}(q_1,q_0)=\frac1{\exp(1)(V+1)},
+\mathrm{TV}(q_1,q_0)=\frac1{\exp(1)(V+1)},
 \qquad
-\operatorname{TV}(q_d,q_0)=\frac{e_d}{\exp(1)(V+1)}.
+\mathrm{TV}(q_d,q_0)=\frac{e_d}{\exp(1)(V+1)}.
 ```
 
 The two resulting lower bounds must be distinguished. The arbitrary-replacer bound is

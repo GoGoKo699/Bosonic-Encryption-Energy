@@ -31,7 +31,7 @@ The [finite construction C1](finite_key.md) applies a uniform Weyl operator to t
 The averaged channel removes coherence between the blocks and replaces the low block by its uniform mixture. For every joint plaintext and reference, the trace distance from the specified replacement state is exactly the high-block probability,
 
 ```math
-T=q=\operatorname{Tr}(Q_d\rho_A)\le\frac{E}{d}.
+T=q=\mathrm{Tr}(Q_d\rho_A)\le\frac{E}{d}.
 ```
 
 For $`E\le d`$, the inequality is saturated by a suitable mixture of vacuum and the level $`d`$. When $`E\ge d`$, the level $`d`$ attains the maximum possible error of one. This gives a complete error formula, rather than an estimate based on a typical message. The charged resources are
@@ -83,7 +83,7 @@ This statement has a precise scope. The Gaussian displacement key remains contin
 
 ## 4. Why centering the reduced state is insufficient
 
-The scalar condition $`\operatorname{Tr}(a\rho_A)=0`$ does not remove a signal stored in correlations with a reference. Consider equally likely coherent states $`|\alpha\rangle`$ and $`|-\alpha\rangle`$ whose signs are recorded in orthogonal reference flags. Their averaged oscillator state has zero first moment. Conditional on the reference, their opposite displacements remain distinguishable.
+The scalar condition $`\mathrm{Tr}(a\rho_A)=0`$ does not remove a signal stored in correlations with a reference. Consider equally likely coherent states $`|\alpha\rangle`$ and $`|-\alpha\rangle`$ whose signs are recorded in orthogonal reference flags. Their averaged oscillator state has zero first moment. Conditional on the reference, their opposite displacements remain distinguishable.
 
 The phase randomization used here cancels the vacuum-to-one-photon contribution as an operator on the joint ciphertext and reference. This is why the proof applies to arbitrary purifications and flags, rather than only centered reduced states. Keeping that operator structure is essential when converting a phase-space observation into a cryptographic secrecy guarantee.
 
