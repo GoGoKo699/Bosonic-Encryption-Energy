@@ -61,6 +61,12 @@ The chapters form a connected account, with one authoritative location for each 
 
 For attribution and comparison, read [Related work](references/RELATED_WORK.md) and the [BibTeX bibliography](references/references.bib). Standard channel identities, quantum one-time pads, and finite-dimensional quantum Shannon bounds are distinguished from the energy-constrained reductions and phase-rate results established here. Combining secret rotations and displacements is an existing optical idea; the new claim is not the first use of those controls.
 
+## Learn the project
+
+The educational anchor is **Weedbrook et al., [Gaussian Quantum Information](https://arxiv.org/abs/1110.3234)**, *Reviews of Modern Physics* **84**, 621–669 (2012). The [source-to-project bridge](learning/WEEDBROOK_BRIDGE.md) selects the relevant sections, translates quadrature and channel conventions, and develops the steps from Gaussian physics to reference-aware encryption.
+
+The [30-milestone map](learning/MILESTONES.md) follows the project's two connected questions: what reversible encryption must cost, and how phase randomness changes the optical construction. **M01–M12** assemble the physical and information-theoretic background into a complete encryption model. **M13–M30** develop the energy and key laws, the phase mechanism, the evidence, and their physical interpretation. Each milestone has a conceptual target, dependencies, and pointers to the canonical proofs.
+
 ## Reproduce the checks
 
 The analytic proofs do not rely on numerical truncation. The [verification suite](verification/README.md) independently checks finite Weyl averages, selected entangled inputs under exact loss Kraus maps, finite-parameter constants, and the homodyne comparison.

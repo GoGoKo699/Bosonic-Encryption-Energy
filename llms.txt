@@ -2,6 +2,13 @@
 
 > Exactly recoverable encryption of a mean-energy-bounded oscillator: ciphertext energy and finite-key resource laws, plus a first-Fourier-moment criterion for phase-assisted Gaussian displacement.
 
+## Choose a reading route
+
+- **Scientific story:** begin with [README](README.md), follow the model, energy, finite-key, Gaussian, and phase chapters below, then read the interpretation and the focused displacement comparison.
+- **Study:** use the single anchor, Weedbrook et al., through the [source-to-project bridge](learning/WEEDBROOK_BRIDGE.md) and the [30-milestone map](learning/MILESTONES.md). M01–M12 build the background framework; M13–M30 assemble the results and their meaning. The map records common understanding targets and scientific dependencies.
+- **Theorems and proofs:** E1/E2/E2R are in energy_cost.md; C1/K1 in finite_key.md; G1/G2/G3 in gaussian_encryption.md; P1/P2/P3 in phase_criterion.md. Use the linked scientific chapters below for their exact hypotheses, constants, and proofs.
+- **Reproduction:** begin with [verification/README.md](verification/README.md), run the documented command, and compare its output with [the recorded results](verification/results.json). Read the stated limits of finite numerical checks.
+
 ## Scientific route
 
 - [Model](science/model.md): one input oscillator, one ciphertext oscillator, fixed nondegenerate number spectrum, arbitrary reference, half trace distance, exact keyed recovery, and energy accounting.
@@ -19,6 +26,8 @@
 - [Verification](verification/README.md): commands, finite numerical checks, actual environment, and limitations.
 
 ## Reading constraints
+
+The selected educational anchor is Weedbrook et al., Gaussian Quantum Information, Reviews of Modern Physics 84, 621–669 (2012), with arXiv:1110.3234v1 as the accessible source. The bridge distinguishes source foundations, local derivations, and imported research theorems. The review's vacuum covariance is I; the project's is I/2. Its covariance matrix symbol V is distinct from the project's scalar added-noise photon number V. The review's QKD protocols are a different task from the preshared-key encryption studied here.
 
 The theorem statements and proofs in science/ define the supported claims. Energy and key results determine scaling rather than optimal leading constants. The lower bound counts all transmitted degrees of freedom under a fixed single-oscillator spectrum. The key converse bounds finite alphabet size, not arbitrary nonuniform Shannon entropy. Gaussian displacement retains a continuous key; the one-bit claim concerns only additional phase randomness. The phase classification fixes the phase law and positive input energy while the displacement variance increases. Its dependence on very small input energy is stated separately.
 

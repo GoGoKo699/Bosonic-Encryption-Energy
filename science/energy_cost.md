@@ -17,7 +17,7 @@ N=\sum_{n=0}^{\infty}n|n\rangle\langle n|.
 The secret classical key is independent of the plaintext and its reference. For each key $`k`$, normal CPTP maps $`\mathcal E_k`$ and $`\mathcal D_k`$ obey exact keyed recovery,
 
 ```math
-\mathcal D_k\circ\mathcal E_k=\operatorname{id}.
+\mathcal D_k\circ\mathcal E_k=\mathrm{id}.
 ```
 
 The averaged encoder is $`\overline{\mathcal E}=\mathbb E_k\mathcal E_k`$. Define
@@ -25,7 +25,7 @@ The averaged encoder is $`\overline{\mathcal E}=\mathbb E_k\mathcal E_k`$. Defin
 ```math
 \tau_0=\overline{\mathcal E}(|0\rangle\langle0|),
 \qquad
-C_{\rm vac}=\operatorname{Tr}(N\tau_0).
+C_{\rm vac}=\mathrm{Tr}(N\tau_0).
 ```
 
 An infinite value of $`C_{\rm vac}`$ is allowed. All energy bounds below are then automatically satisfied.
@@ -35,10 +35,10 @@ Trace distance is $`T(\rho,\sigma)=\frac12\|\rho-\sigma\|_1`$. Secrecy with a fi
 ```math
 \delta_E(\overline{\mathcal E};\tau)
 =
-\sup_{\substack{\rho_{AR}\ge0,\ \operatorname{Tr}\rho_{AR}=1\\
-                 \operatorname{Tr}(N\rho_A)\le E}}
+\sup_{\substack{\rho_{AR}\ge0,\ \mathrm{Tr}\rho_{AR}=1\\
+                 \mathrm{Tr}(N\rho_A)\le E}}
 T\!\left(
- (\overline{\mathcal E}\otimes\operatorname{id}_R)(\rho_{AR}),
+ (\overline{\mathcal E}\otimes\mathrm{id}_R)(\rho_{AR}),
  \tau\otimes\rho_R
 \right)
 \le\epsilon.
@@ -53,7 +53,7 @@ P_d=\sum_{n=0}^{d-1}|n\rangle\langle n|,
 \qquad
 \pi_d=\frac{P_d}{d},
 \qquad
-e_d=\operatorname{Tr}(N\pi_d)=\frac{d-1}{2}.
+e_d=\mathrm{Tr}(N\pi_d)=\frac{d-1}{2}.
 ```
 
 Although $`\pi_d`$ need not itself satisfy the input-energy bound, an appropriately diluted and flagged version does.
@@ -77,7 +77,7 @@ Consequently, for an average of exactly reversible encoders,
 In particular, every rank-$`m`$ ciphertext projector $`P`$ satisfies
 
 ```math
-\operatorname{Tr}(P\sigma_d)\le\frac{m}{d}.
+\mathrm{Tr}(P\sigma_d)\le\frac{m}{d}.
 ```
 
 ### Proof
@@ -127,20 +127,20 @@ For convenience, set $`B_d(\delta)=0`$ when $`\delta\ge1`$.
 If a state $`\omega`$ obeys
 
 ```math
-\operatorname{Tr}(P_m\omega)\le\frac{m}{d}+\delta
+\mathrm{Tr}(P_m\omega)\le\frac{m}{d}+\delta
 \quad\text{for every integer }m\ge1,
 ```
 
 then
 
 ```math
-\operatorname{Tr}(N\omega)\ge B_d(\delta).
+\mathrm{Tr}(N\omega)\ge B_d(\delta).
 ```
 
 For $`0\le\delta\le1`$, this implies the simpler bound
 
 ```math
-\operatorname{Tr}(N\omega)
+\mathrm{Tr}(N\omega)
 \ge
 \max\left\{
 0,\ \frac{d(1-\delta)^2}{2}-\frac{1-\delta}{2}
@@ -152,8 +152,8 @@ For $`0\le\delta\le1`$, this implies the simpler bound
 The oscillator has one level at each nonnegative integer, so monotone convergence gives the exact tail-sum identity
 
 ```math
-\operatorname{Tr}(N\omega)
-=\sum_{m=1}^{\infty}\operatorname{Tr}[(I-P_m)\omega].
+\mathrm{Tr}(N\omega)
+=\sum_{m=1}^{\infty}\mathrm{Tr}[(I-P_m)\omega].
 ```
 
 Each summand is at least $`(1-\delta-m/d)_+`$. This proves the first assertion, including when the energy diverges. To obtain the second, put $`a=1-\delta`$ and $`f=da-\lfloor da\rfloor`$. Direct summation gives
@@ -169,8 +169,8 @@ The energy is also nonnegative. $`\square`$
 One way to establish the lemma's premise is to find a state $`\sigma\le I/d`$ with $`T(\omega,\sigma)\le\delta`$. The operational characterization of trace distance then gives
 
 ```math
-\operatorname{Tr}(P_m\omega)
-\le\operatorname{Tr}(P_m\sigma)+\delta
+\mathrm{Tr}(P_m\omega)
+\le\mathrm{Tr}(P_m\sigma)+\delta
 \le\frac{m}{d}+\delta.
 ```
 
@@ -273,10 +273,10 @@ For $`E>0`$, exact keyed recovery and zero secrecy error cannot both hold for a 
 Indeed, the flag argument at $`\epsilon=0`$ gives $`\sigma_d=\tau_0`$ for every $`d`$. E1 then implies $`\tau_0\le I/d`$ for every $`d`$. For each fixed $`m`$,
 
 ```math
-\operatorname{Tr}(P_m\tau_0)\le\frac{m}{d}\longrightarrow0.
+\mathrm{Tr}(P_m\tau_0)\le\frac{m}{d}\longrightarrow0.
 ```
 
-Letting $`m\to\infty`$ contradicts $`\operatorname{Tr}\tau_0=1`$. If $`\delta_E^*=0`$ is given as an infimum, an approximating sequence of replacers first establishes the same equality by taking its error to zero.
+Letting $`m\to\infty`$ contradicts $`\mathrm{Tr}\tau_0=1`$. If $`\delta_E^*=0`$ is given as an infimum, an approximating sequence of replacers first establishes the same equality by taking its error to zero.
 
 ### Matching order of growth
 
@@ -309,8 +309,8 @@ Let
 be the decoded channel averaged over the independent key. Suppose its reference-aware correctness error obeys
 
 ```math
-\sup_{\operatorname{Tr}(N\rho_A)\le E}
-T\!\left[(\mathcal R\otimes\operatorname{id}_R)(\rho_{AR}),
+\sup_{\mathrm{Tr}(N\rho_A)\le E}
+T\!\left[(\mathcal R\otimes\mathrm{id}_R)(\rho_{AR}),
          \rho_{AR}\right]
 \le\gamma.
 ```
@@ -355,9 +355,9 @@ For each key define its entanglement infidelity on this input by
 
 ```math
 \eta_k
-=1-\operatorname{Tr}\!\left[
+=1-\mathrm{Tr}\!\left[
 \Phi_d\,
-(\operatorname{id}_R\otimes\mathcal D_k\mathcal E_k)(\Phi_d)
+(\mathrm{id}_R\otimes\mathcal D_k\mathcal E_k)(\Phi_d)
 \right].
 ```
 
@@ -372,7 +372,7 @@ Here the probability of the $`\Phi_d`$ projector is a permissible distinguishing
 We next show that every rank-$`m`$ ciphertext projector $`P`$ satisfies
 
 ```math
-\operatorname{Tr}[P\mathcal E_k(\pi_d)]
+\mathrm{Tr}[P\mathcal E_k(\pi_d)]
 \le\frac{m}{d}+\sqrt{\eta_k}.
 ```
 
@@ -392,12 +392,12 @@ V_k\mathcal E_k(\pi_d)V_k^\dagger,
 \le\sqrt{\eta_k},
 ```
 
-where $`V_k:C\to A'B`$ is the decoder isometry. The state on the right is bounded above by $`I/d`$, and $`V_kPV_k^\dagger`$ is a rank-$`m`$ projector. Taking its expectation proves the concentration estimate. When $`\eta_k=1`$, the estimate follows directly from the trivial bound $`\operatorname{Tr}[P\mathcal E_k(\pi_d)]\le1`$.
+where $`V_k:C\to A'B`$ is the decoder isometry. The state on the right is bounded above by $`I/d`$, and $`V_kPV_k^\dagger`$ is a rank-$`m`$ projector. Taking its expectation proves the concentration estimate. When $`\eta_k=1`$, the estimate follows directly from the trivial bound $`\mathrm{Tr}[P\mathcal E_k(\pi_d)]\le1`$.
 
 Averaging and using concavity of the square root now yields
 
 ```math
-\operatorname{Tr}(P\sigma_d)
+\mathrm{Tr}(P\sigma_d)
 \le\frac{m}{d}+\mathbb E_k\sqrt{\eta_k}
 \le\frac{m}{d}+\sqrt{\frac{\gamma}{p_d}}.
 ```
@@ -405,7 +405,7 @@ Averaging and using concavity of the square root now yields
 Combining this with the secrecy comparison, and taking $`P=P_m`$, gives
 
 ```math
-\operatorname{Tr}(P_m\tau_0)
+\mathrm{Tr}(P_m\tau_0)
 \le\frac{m}{d}+\widehat\delta_d.
 ```
 
